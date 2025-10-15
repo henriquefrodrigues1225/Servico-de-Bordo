@@ -1,0 +1,219 @@
+/* Importando uma fonte profissional do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: #041E42;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 5%;
+    
+    /* --- Alterações Principais --- */
+    display: flex;
+    align-items: center;    /* Mantém a logo alinhada verticalmente */
+    position: relative;     /* 1. Define este como o container de referência para o posicionamento absoluto */
+    min-height: 60px;       /* Garante uma altura mínima para o cabeçalho */
+}
+
+.logo {
+    max-width: 130px;
+    height: auto;
+    
+    /* --- Alteração Principal --- */
+    min-width: 80px;        /* 2. Garante que a logo nunca seja menor que 70px */
+    margin-left: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 500;
+    
+    /* --- Alterações Principais para o Centrado Perfeito --- */
+    position: absolute;     /* 3. Tira o título do fluxo normal */
+    left: 50%;              /* 4. Move o início do elemento para o meio da tela */
+    top: 50%;
+    /* 5. Puxa o elemento de volta pela metade de sua própria largura e altura, centralizando-o */
+    transform: translate(-50%, -50%); 
+    width: 100%;            /* Garante que o texto tenha espaço para se centralizar */
+    text-align: center;     /* Adicionado para garantir o alinhamento do texto */
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #005a9e;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+select, button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#mensagem-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sucesso { background-color: #d4edda; color: #155724; }
+.erro { background-color: #f8d7da; color: #721c24; }
+
+/* --- NOVOS ESTILOS PARA O GRID DE SNACKS --- */
+.snacks-grid {
+    display: grid;
+    /* Cria colunas responsivas: elas terão no mínimo 120px e se ajustarão ao espaço */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.snack-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.snack-card:hover {
+    border-color: #007bff;
+    transform: translateY(-5px); /* Efeito de "levantar" o cartão */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilo para o cartão QUANDO ele está selecionado */
+.snack-card.selected {
+    border-color: #00387b; /* Azul forte da Azul */
+    background-color: #e7f1ff; /* Um azul bem claro de fundo */
+    color: #00387b;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05); /* Levemente maior para dar destaque */
+}
+
+
+/* --- NOVOS ESTILOS PARA A SEÇÃO "MEU ASSENTO" --- */
+.meu-assento-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meu-assento-status-container .assento-card {
+    min-width: 250px; /* Garante uma largura mínima para o cartão */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra para dar destaque */
+}
+
+.snack-card img {
+    max-width: 80px; /* Define uma largura máxima para a imagem */
+    max-height: 60px; /* Define uma altura máxima */
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.snack-card span {
+    display: block; /* Garante que o texto fique abaixo da imagem */
+    font-size: 0.9em;
+}
+
+.meu-assento-section .assento-card {
+    border: none;
+    color: white; /* O texto é branco por padrão, para contrastar com os fundos coloridos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.meu-assento-section .assento-card:hover {
+    transform: scale(1.03);
+}
+
+/* Cor para o nível Básico */
+.assento-card.status-basico {
+    background-color: #55cde2;
+    color: #041E42; /* O texto do Básico é escuro para ter contraste */
+}
+
+/* Cor para o nível Topázio */
+.assento-card.status-topazio {
+    background-color: #00a0e4;
+}
+
+/* Cor para o nível Safira */
+.assento-card.status-safira {
+    background-color: #0073b1;
+}
+
+/* Cor para o nível Diamante */
+.assento-card.status-diamante {
+    background-color: #041E42;
+}
+
+/* Garante que os textos internos herdem a cor correta */
+.meu-assento-section .assento-card .numero,
+.meu-assento-section .assento-card .status,
+.meu-assento-section .assento-card .pedidos {
+    color: inherit;
+}
+
+.meu-assento-section .assento-card .numero {
+    opacity: 0.8;
+}

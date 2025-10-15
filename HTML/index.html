@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Azul - Serviço de Bordo Digital</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../IMG/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <img src="../IMG/logo.png" alt="Logo da Azul" class="logo">
+        <h1>Serviço de Bordo Digital</h1>
+    </header>
+
+    <main>
+        <section class="pedido-section">
+            <h2 id="titulo-pedido">Realizar Pedido</h2>
+            <div class="form-group">
+                <label>Escolha seu Snack:</label>
+                <div id="snacks-container" class="snacks-grid">
+                    <p>Carregando snacks...</p>
+                </div>
+            </div>
+            
+            <button id="btn-pedir">Confirmar Pedido</button>
+            <div id="mensagem-status"></div>
+        </section>
+
+        <section class="meu-assento-section">
+            <h2>Meu Assento</h2>
+            <div id="meu-assento-status-container">
+                </div>
+        </section>
+    </main>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>
