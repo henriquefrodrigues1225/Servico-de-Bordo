@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul - Status de Voo</title>
+    <link rel="stylesheet" href="../CSS/style.css"> 
+    <link rel="shortcut icon" href="../IMG/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <img src="../IMG/logo.png" alt="Logo da Azul" class="logo">
+        <h1>Consulta de Status de Voo</h1>
+    </header>
+
+    <main>
+        <div class="layout-container">
+            
+            <div class="column-left">
+                <section class="all-flights-section">
+                    <h2>Voos Programados</h2>
+                    <div id="all-flights-list-container">
+                        <p class="placeholder">Carregando voos...</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="column-right">
+                <section class="search-section">
+                    <h2>Consulte um Voo Específico</h2>
+                    <div class="search-form">
+                        <input type="text" id="flight-code-input" placeholder="Digite o código do voo (ex: AD4070)">
+                        <button id="search-button">Buscar</button>
+                    </div>
+                </section>
+        
+                <section id="search-result-section" class="result-section">
+                    <h2>Detalhes do Voo</h2>
+                    <div id="flight-result-container">
+                        <p class="placeholder">Aguardando sua busca...</p>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="../JS/script.js"></script>
+</body>
+</html>

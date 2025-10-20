@@ -46,9 +46,10 @@ ASSENTOS = {
     3: {"Status": 'Básico', "Pedidos": 0},
     4: {"Status": 'Diamante', "Pedidos": 0},
     5: {"Status": 'Safira', "Pedidos": 0},
-    # Adicionando mais assentos para um cenário mais realista
+    6: {"Status": 'Safira', "Pedidos": 0},
     10: {"Status": 'Básico', "Pedidos": 0},
     22: {"Status": 'Topázio', "Pedidos": 0},
+    23: {"Status": 'Topázio', "Pedidos": 0}
 }
 
 

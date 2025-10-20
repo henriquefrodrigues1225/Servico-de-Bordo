@@ -81,20 +81,28 @@ header h1 {
 
 .snacks-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
+    /* AQUI ESTÁ A MUDANÇA PRINCIPAL:
+       Em vez de um preenchimento automático (auto-fill), definimos explicitamente 4 colunas.
+       A unidade '1fr' significa que cada coluna ocupará 1 fração igual do espaço disponível. */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Aumentamos o espaçamento para um visual mais limpo */
     margin-top: 10px;
 }
 
 .snack-card {
     border: 2px solid #ccc;
     border-radius: 8px;
-    padding: 15px;
+    padding: 20px; /* Mais preenchimento interno para o conteúdo respirar */
     text-align: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     background-color: #fff;
     color: #333;
+    /* Adicionamos flexbox para centralizar o conteúdo verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .snack-card:hover {
@@ -113,15 +121,17 @@ header h1 {
 }
 
 .snack-card img {
-    max-width: 80px;
-    max-height: 60px;
+    /* Imagem agora ocupa uma porcentagem do espaço do card, tornando-a maior e responsiva */
+    width: 50%; 
+    height: auto; /* Mantém a proporção da imagem */
     object-fit: contain;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Mais espaço entre imagem e texto */
 }
 
 .snack-card span {
     display: block;
-    font-size: 0.9em;
+    font-size: 1em; /* Fonte um pouco maior para melhor leitura */
+    font-weight: 500;
 }
 
 /* --- BOTÕES E MENSAGENS DE STATUS --- */
